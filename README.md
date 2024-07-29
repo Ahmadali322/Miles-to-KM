@@ -2,4 +2,4 @@
 
 This is a simple converter I created in Python while practicing. It features a GUI implemented using the Tkinter and customtkinter libraries (each in separate files).
 
-Check out [Miles to KM](https://test1.dealbuystore.com/miles-to-km) for a working demo.
+This project is Under devolopment and will add further features and this will not only be Miles to KM coverter but other conversions will soon be integrated.
