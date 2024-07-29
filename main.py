@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
+import custontkinter as ctk
 
 # Create a window
 window = tk.Tk()
@@ -13,21 +14,21 @@ def convert():
     output.set(f'{miles} Miles is {km} Kilometers')
 
 # Display fromtend
-intro_label = ttk.Label(window, text = 'Miles to KM converter', font = 'Calibri 20 bold')
+intro_label = ctk.CTkLabel(window, text = 'Miles to KM converter', font = 'Calibri 20 bold')
 intro_label.pack()
 
 # Displaying Input Field
-input_frame = ttk.Frame(window)
+input_frame = ctk.CTkFrame(window)
 input_int = tk.IntVar()
-input = ttk.Entry(input_frame, textvariable = input_int)
-submit_button = ttk.Button(input_frame, text = 'Convert', command = convert)
+input = ctk.CTkEntry(input_frame, textvariable = input_int)
+submit_button = ctk.CTkButton(input_frame, text = 'Convert', command = convert)
 input.pack(side = 'left', padx = 5)
 submit_button.pack(side = 'left')
 input_frame.pack(pady = 17)
 
 # Displaying Output
 output = tk.IntVar()
-output_label = ttk.Label(window, textvariable = output, font = 'Calibri 15')
+output_label = ctk.CTkLabel(window, textvariable = output, font = 'Calibri 15')
 output_label.pack()
 
 # Start the window
