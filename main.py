@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-import custontkinter as ctk
+import customtkinter as ctk
 
 # Create a window
 window = tk.Tk()
@@ -11,24 +11,24 @@ window.geometry('500x300')
 def convert():
     miles = input_int.get()
     km = miles * 1.61
-    output.set(f'{miles} Miles is {km} Kilometers')
+    output.set(f'Output:\n{miles} Miles is {km} Kilometers')
 
 # Display fromtend
-intro_label = ctk.CTkLabel(window, text = 'Miles to KM converter', font = 'Calibri 20 bold')
+intro_label = ttk.Label(window, text = 'Miles to KM converter', font = ('Calibri', 20, 'bold'))
 intro_label.pack()
 
 # Displaying Input Field
-input_frame = ctk.CTkFrame(window)
+input_frame = ttk.Frame(window)
 input_int = tk.IntVar()
-input = ctk.CTkEntry(input_frame, textvariable = input_int)
-submit_button = ctk.CTkButton(input_frame, text = 'Convert', command = convert)
+input = ttk.Entry(input_frame, textvariable = input_int)
+submit_button = ttk.Button(input_frame, text = 'Convert', command = convert)
 input.pack(side = 'left', padx = 5)
 submit_button.pack(side = 'left')
 input_frame.pack(pady = 17)
 
 # Displaying Output
-output = tk.IntVar()
-output_label = ctk.CTkLabel(window, textvariable = output, font = 'Calibri 15')
+output = tk.IntVar(value = '')
+output_label = ttk.Label(window, textvariable = output, font = ('Calibri', 15, 'bold'))
 output_label.pack()
 
 # Start the window
